@@ -39,7 +39,6 @@ interface KitsuApi {
         @Path("id") id: String,
     ): Response<ProducerResponse>
 
-    //https://kitsu.io/api/edge/anime?filter%5Btext%5D=one
     @GET("edge/anime")
     suspend fun getSearchAnime(
         @Query("filter[text]") query: String

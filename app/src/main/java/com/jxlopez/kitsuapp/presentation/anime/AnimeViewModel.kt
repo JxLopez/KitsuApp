@@ -1,12 +1,9 @@
 package com.jxlopez.kitsuapp.presentation.anime
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.jxlopez.kitsuapp.data.Status
-import com.jxlopez.kitsuapp.data.datasource.repository.AnimeRepository
 import com.jxlopez.kitsuapp.domain.usecase.GetAnimeUseCase
 import com.jxlopez.kitsuapp.domain.usecase.GetAnimesPaginatedUseCase
 import com.jxlopez.kitsuapp.domain.usecase.GetSearchAnimeUseCase

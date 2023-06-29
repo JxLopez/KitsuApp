@@ -1,7 +1,6 @@
 package com.jxlopez.kitsuapp.presentation.anime
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import android.view.LayoutInflater
 import android.view.Menu

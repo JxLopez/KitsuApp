@@ -20,7 +20,7 @@ data class Anime(
     val attributes: Attributes
 
 )
-//duracion pelicula, calificacion*, director*, casa productora*
+
 data class Attributes(
     val description: String?,
     val posterImage: PosterImage?,
@@ -56,7 +56,7 @@ data class Titles(
 )
 
 fun Anime.toUiModel(): AnimeItem {
-    var titles = "${attributes.titles?.en ?: "-"}, ${attributes.titles?.enJp ?: "-"}, ${attributes.titles?.jaJp ?: "-"}"
+    val titles = "${attributes.titles?.en ?: "-"}, ${attributes.titles?.enJp ?: "-"}, ${attributes.titles?.jaJp ?: "-"}"
     return AnimeItem(
         id,
         attributes.posterImage?.tiny ?: "",

@@ -1,7 +1,6 @@
 package com.jxlopez.kitsuapp.data.datasource.repository
 
 import com.jxlopez.kitsuapp.data.Resource
-import com.jxlopez.kitsuapp.model.Anime
 import com.jxlopez.kitsuapp.model.AnimeDataItem
 import com.jxlopez.kitsuapp.model.AnimeItem
 import kotlinx.coroutines.flow.Flow
