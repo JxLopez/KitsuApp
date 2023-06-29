@@ -28,7 +28,8 @@ data class Attributes(
     val startDate: String?,
     val titles: Titles?,
     val coverImage: CoverImage?,
-    val averageRating: String?
+    val averageRating: String?,
+    val youtubeVideoId: String?
 )
 data class PosterImage(
     val tiny: String,
@@ -66,6 +67,7 @@ fun Anime.toUiModel(): AnimeItem {
         attributes.description ?: "-",
         attributes.startDate?.substring(0,4) ?: "-",
         attributes.averageRating?.toFloatOrNull()?.div(20) ?: 0f,
+        attributes.youtubeVideoId ?: ""
     )
 }
 

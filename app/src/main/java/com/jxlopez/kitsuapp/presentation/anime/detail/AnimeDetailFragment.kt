@@ -12,6 +12,8 @@ import com.jxlopez.kitsuapp.model.AnimeItem
 import com.jxlopez.kitsuapp.presentation.BaseFragment
 import com.jxlopez.kitsuapp.utils.extensions.loadImageUrl
 import com.jxlopez.kitsuapp.utils.extensions.observe
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -51,9 +53,11 @@ class AnimeDetailFragment : BaseFragment() {
             is AnimeDetailViewState.Error -> {}
             is AnimeDetailViewState.Company -> {
                 binding.tvProductions.text = String.format(getString(R.string.productions_details_fragment), state.name)
+                binding.tvProductions.visibility = View.VISIBLE
             }
             is AnimeDetailViewState.Director -> {
                 binding.tvDirector.text = String.format(getString(R.string.director_details_fragment), state.name)
+                binding.tvDirector.visibility = View.VISIBLE
             }
             AnimeDetailViewState.Loading -> {}
             else -> {}
@@ -68,5 +72,16 @@ class AnimeDetailFragment : BaseFragment() {
         binding.tvDescription.text = anime.description
         binding.backdrop.loadImageUrl(anime.coverImage)
         binding.ivFrontPage.loadImageUrl(anime.posterImage)
+        if(anime.youtubeVideoId.isNotEmpty()) {
+            lifecycle.addObserver(binding.youtubePlayerView)
+            binding.youtubePlayerView.addYouTubePlayerListener(object :
+                AbstractYouTubePlayerListener() {
+                override fun onReady(youTubePlayer: YouTubePlayer) {
+                    youTubePlayer.cueVideo(anime.youtubeVideoId, 0f)
+                }
+            })
+        } else {
+            binding.youtubePlayerView.visibility = View.GONE
+        }
     }
 }

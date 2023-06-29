@@ -9,5 +9,6 @@ data class AnimeItem(
     val duration: String = "",
     val description: String = "",
     val releaseDate: String = "",
-    val rating: Float = 0.0f
+    val rating: Float = 0.0f,
+    val youtubeVideoId: String = ""
 )

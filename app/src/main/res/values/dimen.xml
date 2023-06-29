@@ -13,7 +13,7 @@
     <dimen name="size_heigth_card_meal">160dp</dimen>
     <dimen name="card_elevation">3dp</dimen>
     <dimen name="text_size_big">32sp</dimen>
-    <dimen name="text_size_medium">22sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
     <dimen name="text_size_small">16sp</dimen>
 
 </resources>
