@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">KitsuApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_anime_list_fragment">Bienvenido</string>
+    <string name="subtitle_anime_list_fragment">Hola, busquemos anime</string>
+
+    <string name="name_anime_list_fragment">Animes</string>
+    <string name="not_found_anime_list_fragment">Sin resultados</string>
+    <string name="message_error_anime_list_fragment">Ocurrió un problema al obtener los resultados: %s</string>
+
+    <string name="director_details_fragment">Dirigido por: %s</string>
+    <string name="productions_details_fragment">Producido por: %s</string>
+
+    <string name="search">Buscar</string>
+</resources>
